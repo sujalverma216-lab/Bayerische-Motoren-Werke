@@ -1,0 +1,1261 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+
+
+.hero-title {
+  width: 100%;
+  text-align: center;
+  opacity: 0.65;  
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: #050505;
+  color: #fff;
+}
+
+button,
+a {
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.85) 20%,
+      rgba(0, 0, 0, 0.45) 45%,
+      rgba(0, 0, 0, 0.15) 100%
+    ),
+    url("https://images.unsplash.com/photo-1556189250-72ba954cfc2b?auto=format&fit=crop&w=2400&q=90");
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.5),
+      transparent 35%,
+      rgba(0, 0, 0, 0.7)
+    );
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+
+  padding: 28px 6vw;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.brand-text {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+
+.bmw-logo {
+  width: 43px;
+  height: 43px;
+
+  border-radius: 50%;
+
+  border: 2px solid white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 7px;
+  font-weight: 700;
+  letter-spacing: 1px;
+
+  background:
+    conic-gradient(
+      #ffffff 0deg 90deg,
+      #1c69d4 90deg 180deg,
+      #ffffff 180deg 270deg,
+      #1c69d4 270deg 360deg
+    );
+}
+
+.bmw-logo span {
+  background: #050505;
+  border-radius: 50%;
+  padding: 8px 5px;
+  color: white;
+}
+
+.nav-links {
+  display: flex;
+  gap: 42px;
+}
+
+.nav-links a {
+  position: relative;
+
+  color: rgba(255, 255, 255, 0.85);
+
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+
+  transition: 0.3s;
+}
+
+.nav-links a::after {
+  content: "";
+
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+
+  width: 0;
+  height: 1px;
+
+  background: white;
+
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: white;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.menu-btn {
+  display: none;
+
+  width: 42px;
+  height: 42px;
+
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  align-items: center;
+}
+
+.menu-btn span {
+  width: 18px;
+  height: 1px;
+  background: white;
+}
+
+/* =========================
+   HERO CONTENT
+========================= */
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+
+  min-height: 100vh;
+
+  padding: 170px 6vw 70px;
+
+  width: 100%;
+  max-width: none;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+}
+
+.eyebrow {
+  font-size: 11px;
+  font-weight: 600;
+  text-align: center;
+
+  letter-spacing: 4px;
+
+  margin-bottom: 25px;
+
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.hero h1 {
+  font-size: clamp(50px, 10vw, 130px);
+
+  line-height: 1;
+
+
+  font-weight: 500;
+
+  letter-spacing: 4px;
+
+  margin-bottom: 28px;
+  font-size: 80px
+}
+
+.hero h1 span,
+.experience h2 span,
+.performance h2 span,
+.final-cta h2 span,
+.section-heading h2 span {
+  font-weight: 300;
+}
+
+.hero-description {
+  max-width: 480px;
+
+  color: rgba(255, 255, 255, 0.7);
+
+  line-height: 1.7;
+
+  font-size: 14px;
+
+  margin-bottom: 28px;
+  margin-inline: auto;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.primary-btn {
+  border: none;
+
+
+
+  background: rgba(255, 255, 255, 0.05);
+
+  border: 1px solid rgba(255, 255, 255, 0.4);
+
+
+  padding: 10px 20px;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  transition: 0.3s;
+}
+
+.primary-btn:hover {
+  transform: translateY(-3px);
+  background: #1c69d4;
+  color: white;
+}
+
+.primary-btn span {
+  font-size: 18px;
+}
+
+/* Both hero CTAs use the same box; space-between keeps the arrow away from the label. */
+.primary-btn {
+  width: 210px;
+  height: 50px;
+  margin: 0px 0 0;
+  padding: 0 0px;
+  justify-content: center;
+}
+
+.secondary-btn {
+  /* Keep the two hero CTAs visually equal despite the shorter label. */
+  width: 110px;
+  margin-top: 20px;
+  height: 48px;
+  padding: 15px 20px;
+
+  background: rgba(255, 255, 255, 0.05);
+
+  border: 1px solid rgba(255, 255, 255, 0.4);
+
+  color: white;
+
+  font-size: 11px;
+
+  letter-spacing: 1.0px;
+  text-transform: uppercase;
+
+  transition: 0.3s;
+}
+
+secondary-btn span {
+  font-size: 18px;
+  margin-left: 5px;
+}
+
+.secondary-btn:hover {
+  background: white;
+  color: black;
+}
+
+.scroll-indicator {
+  position: absolute;
+
+  bottom: 35px;
+  left: 6vw;
+
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  font-size: 9px;
+  letter-spacing: 2px;
+
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.scroll-line {
+  width: 8px;
+  height: 1px;
+
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.hero-number {
+  position: absolute;
+
+  right: 6vw;
+  bottom: 35px;
+
+  font-size: 10px;
+  letter-spacing: 2px;
+
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* =========================
+   MODELS
+========================= */
+
+.models-section {
+  background: #3b424300;
+  color: #ffffff;
+
+  padding: 96px 6vw;
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  margin-bottom: 48px;
+  text-align: center;
+}
+
+.section-heading::before,
+.section-heading::after {
+  height: 1px;
+  flex: 1;
+  content: "";
+  background: #b8b8b3;
+}
+
+.section-heading h2,
+.performance h2 {
+  font-size: clamp(26px, 3vw, 46px);
+  line-height: 1;
+  letter-spacing: -1.5px;
+  margin-top: -35px;
+  font-weight: 60;
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.cars-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 0px;
+}
+
+.car-card {
+  cursor: pointer;
+  font-size: 14px;
+  width: 100%;
+}
+
+.car-image {
+  position: relative;
+
+  height: clamp(320px, 32vw, 420px);
+
+  overflow: hidden;
+
+  background: #ddd;
+}
+
+.car-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.car-card:hover .car-image img {
+  transform: scale(1.08);
+}
+
+.car-number {
+  position: absolute;
+
+  top: 20px;
+  left: 20px;
+
+  color: white;
+
+  font-size: 10px;
+
+  letter-spacing: 2px;
+}
+
+.car-arrow {
+  position: absolute;
+
+  right: 20px;
+  bottom: 20px;
+
+  width: 45px;
+  height: 45px;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgb(226, 224, 224);
+  color: black;
+
+  font-size: 18px;
+
+  opacity: 0;
+
+  transform: translateY(10px);
+
+  transition: 0.4s;
+}
+
+.car-card:hover .car-arrow {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.car-info {
+  padding: 22px 0;
+}
+
+.car-info p {
+  font-size: 12px;
+
+  letter-spacing: 2px;
+
+  color: #777;
+
+  margin-bottom: 8px;
+}
+
+.car-info h3 {
+  font-size: 27px;
+
+  font-weight: 500;
+
+  margin-bottom: 10px;
+}
+
+.car-info span {
+  font-size: 11px;
+
+  color: #555;
+
+  transition: 0.3s;
+}
+
+.car-card:hover .car-info span {
+  color: #1c69d4;
+}
+
+.center-button {
+  display: flex;
+
+  justify-content: center;
+
+  margin-top: -29.5px;
+  margin-bottom: -30px;
+}
+
+.outline-btn {
+  padding: 16px 28px;
+
+  background: transparent;
+  margin-top: 64px;
+
+  border: 1px solid #222;
+
+  color: #eae1e1;
+
+  font-size: 11px;
+
+  letter-spacing: 1.5px;
+
+  text-transform: uppercase;
+
+  transition: 0.3s;
+}
+
+.outline-btn:hover {
+  background: #111;
+  color: rgb(3, 115, 233);
+}
+
+/* =========================
+   EXPERIENCE
+========================= */
+
+.experience {
+  min-height: 750px;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+}
+
+.experience-image {
+  position: absolute;
+  inset: 0;
+
+  background:
+    url("../assets/blackbmw.jpeg");
+
+  background-size: cover;
+  background-position: center;
+}
+
+.experience-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.85),
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.2)
+    );
+}
+
+.experience-content {
+  position: relative;
+
+  z-index: 2;
+
+  padding: 100px 6vw;
+
+  max-width: 700px;
+}
+
+.experience h2,
+.final-cta h2 {
+  font-size: clamp(55px, 7vw, 100px);
+
+  line-height: 0.88;
+
+  letter-spacing: -5px;
+
+  margin-bottom: 35px;
+}
+
+.experience-content > p:not(.eyebrow) {
+  max-width: 470px;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+
+  color: rgba(255, 255, 255, 0.7);
+
+  margin-bottom: 35px;
+}
+
+/* =========================
+   PERFORMANCE
+========================= */
+
+.performance {
+  position: relative;
+
+  min-height: 430px;
+
+  padding: 35px 5vw 0;
+
+  background:
+    radial-gradient(
+      ellipse at 50% 100%,
+      rgba(25, 55, 80, 0.45),
+      transparent 55%
+    ),
+    linear-gradient(
+      180deg,
+      #071019 0%,
+      #05090d 100%
+    );
+
+  color: #fff;
+
+  overflow: hidden;
+}
+
+
+/* =========================
+   FEATURE ROW
+========================= */
+
+.performance-features {
+  position: relative;
+  z-index: 3;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  max-width: 1200px;
+
+  margin: 0 auto;
+}
+
+
+/* =========================
+   FEATURE
+========================= */
+
+.performance-feature {
+  min-height: 135px;
+
+  padding: 0 30px;
+
+  text-align: center;
+
+  border-right: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.performance-feature:last-child {
+  border-right: none;
+}
+
+
+/* =========================
+   ICON
+========================= */
+
+.feature-icon {
+  width: 52px;
+  height: 52px;
+
+  margin: 0 auto 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(60, 150, 220, 0.8);
+
+  border-radius: 50%;
+
+  color: #fff;
+
+  font-size: 25px;
+
+  background: rgba(10, 20, 30, 0.7);
+
+  box-shadow:
+    0 0 12px rgba(40, 130, 200, 0.15);
+}
+
+
+/* =========================
+   FEATURE TITLE
+========================= */
+
+.performance-feature h3 {
+  margin: 0 0 10px;
+
+  font-size: 12px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.5px;
+
+  color: rgba(255, 255, 255, 0.95);
+}
+
+
+/* =========================
+   FEATURE DESCRIPTION
+========================= */
+
+.performance-feature p {
+  margin: 0;
+
+  font-size: 11px;
+
+  line-height: 1.8;
+
+  color: rgba(255, 255, 255, 0.65);
+}
+
+
+/* =========================
+   BOTTOM MESSAGE
+========================= */
+
+.performance-bottom {
+  position: relative;
+
+  z-index: 3;
+
+  margin-top: 45px;
+
+  text-align: center;
+}
+
+.performance-bottom h2 {
+  margin: 0;
+
+  font-size: clamp(18px, 2vw, 24px);
+
+  font-weight: 400;
+
+  line-height: 1.5;
+
+  letter-spacing: 7px;
+
+  color: rgba(255, 255, 255, 0.75);
+}
+
+
+/* =========================
+   SCROLL INDICATOR
+========================= */
+
+.scroll-indicator {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  margin-top: 10px;
+
+  color: rgba(255, 255, 255, 0.7);
+
+  font-size: 11px;
+}
+
+.scroll-circle {
+  width: 25px;
+  height: 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.7);
+
+  border-radius: 50%;
+
+  font-size: 13px;
+}
+
+
+/* =========================
+   LIGHT BEAMS
+========================= */
+
+.light-beams {
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 150px;
+
+  display: flex;
+
+  justify-content: space-around;
+
+  pointer-events: none;
+
+  opacity: 0.8;
+}
+
+.light-beams span {
+  width: 2px;
+  height: 115px;
+
+  margin-top: 35px;
+
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(150, 210, 255, 0.15),
+    rgba(150, 210, 255, 0.8),
+    transparent
+  );
+
+  filter: blur(1px);
+
+  box-shadow:
+    0 0 12px rgba(100, 180, 255, 0.5),
+    0 0 30px rgba(80, 160, 240, 0.25);
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+  .performance {
+    padding: 30px 20px 0;
+  }
+
+  .performance-features {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 30px;
+  }
+
+  .performance-feature:nth-child(2) {
+    border-right: none;
+  }
+
+  .performance-bottom {
+    margin-top: 45px;
+  }
+
+  .performance-bottom h2 {
+    letter-spacing: 4px;
+  }
+}
+
+
+@media (max-width: 600px) {
+
+  .performance {
+  position: relative;
+  min-height: 350px;
+  padding: 35px 5vw 0;
+  
+}
+
+  .performance-features {
+    grid-template-columns: 1fr;
+  }
+
+  .performance-feature {
+    border-right: none;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+
+    padding: 20px 10px;
+  }
+
+  .performance-feature:last-child {
+    border-bottom: none;
+    margin-bottom: -20px;
+  }
+
+  .performance-bottom h2 {
+    font-size: 16px;
+    letter-spacing: 3px;
+    margin-bottom: -10px
+  }
+
+  .light-beams {
+    display: none;
+    margin-top: -100px;
+  }
+}
+
+/* =========================
+   FINAL CTA
+========================= */
+.final-cta {
+  min-height: 720px;
+  display: flex;
+  margin-left: 0;             /* Fixed the black gap by removing margin-left */
+  width: 100%;                /* Ensure it spans the full width */
+  margin-top: 0px;
+  align-items: center;       
+  justify-content: flex-start;
+  text-align: center;
+  font-size: 14px;
+  position: relative;
+  overflow: hidden;
+}
+
+.final-cta::after {
+   
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;                /* Adjusted from 150% to prevent overflow */
+  height: 100%;
+
+  z-index: 1;
+}
+
+/* Replaced video class with background image styling */
+.cta-bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 300px;
+  background-image: url("../assets/bmweye.jpeg");
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+
+.cta-content {
+  position: relative;
+  z-index: 2;
+  margin-left: 430px;
+  font-weight: 400;        /* Moved the text content inward instead of shifting the whole section */
+}
+
+.final-cta .eyebrow {
+  margin-top:-43px;
+  margin-bottom: 30px;
+}
+
+.final-cta h2 {
+  margin-bottom: 30px;
+}
+
+.bookridebutton{
+  background: rgba(255, 255, 255, 0.05);
+
+  border: 1px solid rgba(255, 255, 255, 0.4);
+
+
+  padding: 10px 20px;
+  margin-left: 90px;
+  font-size: 11px;
+  font-weight: 600;
+
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  transition: 0.3s;
+}
+
+.bookridebutton:hover {
+  transform: translateY(-3px);
+  background: #1c69d4;
+  color: white;
+}
+
+/* The final CTA offset should not add space between the two hero buttons. */
+.hero-buttons .bookridebutton {
+  margin-top: 0;
+}
+.cta-title {
+  font-size: 60px;
+  margin-bottom: 20px;
+  letter-spacing: px;
+  font-weight: 550;
+}
+
+.drive {
+  margin-top: 7px;
+
+
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+
+
+.footer-brand p {
+  margin-top: 20px;
+
+  color: #777;
+
+  font-size: 12px;
+}
+
+.footer-links {
+  display: flex;
+
+  justify-content: flex-end;
+
+  gap: 100px;
+}
+
+.copyright {
+  grid-column: 1 / -1;
+
+  border-top: 1px solid #222;
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  color: #555;
+
+  font-size: 10px;
+
+  letter-spacing: 1px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+  .nav-links {
+    display: none;
+  }
+
+  .menu-btn {
+    display: flex;
+  }
+
+  .hero {
+    background-attachment: scroll;
+  }
+
+  .hero-content {
+    padding-left: 7vw;
+    padding-right: 7vw;
+  }
+
+  .hero h1 {
+    letter-spacing: -4px;
+  }
+
+  .section-heading {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 30px;
+  }
+
+  .cars-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .car-image {
+    height: 500px;
+  }
+
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stat {
+    border-bottom: 1px solid #ccc;
+  }
+
+  .stat:nth-child(2) {
+    border-right: none;
+  }
+
+  .stat:nth-child(3),
+  .stat:nth-child(4) {
+    border-bottom: none;
+  }
+
+.footerS {
+  text-align: center;
+  font-size: 0.9rem;
+  width: 1210px;
+  margin-bottom: -20px;
+  margin-left: 70px;
+  margin-top: -40px;
+  color: #888;
+}
+
+  
+
+  .copyright {
+    grid-column: auto;
+    Margin-bottom: 20px;
+    margin-top: -30px
+  }
+}
+
+@media (max-width: 600px) {
+
+  .navbar {
+    padding: 20px 5vw;
+  }
+
+  .brand-text {
+    display: none;
+  }
+
+  .hero-content {
+    padding: 170px 6vw 100px;
+  }
+
+  .hero h1 {
+    font-size: 68px;
+
+    letter-spacing: -4px;
+  }
+
+  .hero-description {
+    font-size: 13px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .scroll-indicator {
+    display: none;
+  }
+
+  .models-section,
+  .performance {
+    padding: 90px 6vw;
+  }
+
+  .section-heading h2,
+  .performance h2 {
+    font-size: 48px;
+
+    letter-spacing: -3px;
+  }
+
+  .car-image {
+    height: 400px;
+  }
+
+  .experience {
+    min-height: 650px;
+  }
+
+  .experience-content {
+    padding: 80px 6vw;
+  }
+
+  .experience h2,
+  .final-cta h2 {
+    font-size: 58px;
+
+    letter-spacing: -3px;
+  }
+
+  .stats {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .stat {
+    padding: 30px 10px 30px 0;
+  }
+
+  .stat:not(:first-child) {
+    padding-left: 15px;
+  }
+
+  .stat strong {
+    font-size: 42px;
+  }
+
+  .footer {
+    padding: 60px 6vw 30px;
+  }
+
+  .footer-links {
+    gap: 50px;
+  }
+}
