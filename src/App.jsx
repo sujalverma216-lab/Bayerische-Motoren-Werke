@@ -10,6 +10,7 @@ import BMWI from './Components/BMWI.jsx'
 import XModels from './Components/XModels.jsx'
 import CoupesC from './Components/CoupesC.jsx'
 import SedansGC from './Components/SedansGC.jsx'
+import './Responsive.css'
 
 
 export default function App() {
